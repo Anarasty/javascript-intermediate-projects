@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Zilla Slab", serif;
+}
+
+#container {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgb(15, 178, 0);
+  padding: 0.5em;
+}
+
+.currencySelector {
+  font-size: 1.5em;
+  border: 0;
+  outline: 0;
+  background-color: rgb(255, 251, 0);
+  color: rgb(0, 24, 6);
+}
+
+#fromName,
+#toName,
+#swapButton {
+  padding: 0.5em;
+  font-size: 1.5em;
+  background-color: rgb(15, 178, 0);
+  margin-bottom: 16px;
+  margin-top: 0px;
+  color: rgb(255, 251, 0);
+}
+
+#swapButton {
+  padding: 0.5em;
+  font-size: 1.5em;
+  background-color: rgb(15, 178, 0);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-color: #000000;
+  color: rgb(255, 251, 0);
+}
+
+#swapButton:hover {
+  border-color: #ff0202;
+}
+
+#swapButton:active {
+  background-color: #00c8ff;
+}
+
+#errorMessage {
+  display: none;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #471111;
+  margin-bottom: 16px;
+  margin-top: 0px;
+  color: rgb(255, 0, 0);
+}
+
+.valueInput {
+  border-style: inset;
+  border-color: #000000;
+  border-width: 1px;
+  outline: 0px;
+  width: 100%;
+  font-size: 2em;
+  width: 100%;
+  /* background-color: rgb(15, 178, 0); */
+  background-color: rgb(185, 182, 0);
+}
+
+.formContainer {
+  width: 500px;
+  text-align: left;
+  background-color: #3c573f;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  #fromForm,
+  #toForm {
+    width: 98vw;
+    box-sizing: border-box;
+  }
+}
