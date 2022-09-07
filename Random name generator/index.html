@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Name Generator</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            padding: 1rem;
+        }
+        .container {
+            width: calc(768px - 1rem);
+            background-color: rgb(83, 36, 102);
+            color: #fff;
+            padding: 16px;
+            border-radius: 10px;
+        }
+        .container h4{
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+        .container .form {
+            position: relative;
+            width: 100%;
+            margin: 2rem 0;
+        }
+        .container .form input {
+            width: 100%;
+            background-color: rgb(45, 20, 56);
+            border: none;
+            outline: none;
+            padding: 15px 145px 15px 12px;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .container .form button {
+            position: absolute;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            color: #fff;
+            border: none;
+            outline: none;
+            background-color: blueviolet;
+            right: 3px;
+            top: 3px;
+            cursor: pointer;
+        }
+        .container .nameBox {
+            position: relative;
+            background-color: blueviolet;
+            border-radius: 10px;
+            padding: 12px;
+        }
+        .container .nameBox span {
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-transform: capitalize;
+            letter-spacing: .3px;
+        }
+    </style>
+
+    <div class="container">
+        <h4>How many times would you like to generate (up to 10)</h4>
+        <div class="form">
+            <input type="number" min="1" max="10" value="1" class="qty">
+            <button onclick="nameQty()">GENERATE</button>
+        </div>
+        <div class="nameBox">
+            <span class="nameList">CLICK ON GENERATE BUTTON</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
