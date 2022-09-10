@@ -95,4 +95,40 @@ function totalCost(product) {
   }
 }
 
+function displayCart() {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let productContainer = document.querySelector(".products");
+  let cartCost = localStorage.getItem('totalCost');
+
+  console.log(cartItems);
+  if (cartItems && productContainer) {
+    productContainer.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      productContainer.innerHTML += `
+      <div class="product">
+        <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+        <img src="${item.tag}.jpg"/>
+        <span>${item.name}</span>
+        <div class="price">$${item.price},00</div>
+        <div class="quantity">
+          <i class="fa-sharp fa-solid fa-arrow-left"></i>
+          <span>${item.inCart}</span>
+          <i class="fa-sharp fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="total">$${item.inCart * item.price},00</div>
+      </div>
+      `;
+    });
+
+    productContainer.innerHTML += `
+      <div class="basketTotalContainer">
+        <h4 class="basketTotalTitle">Basket total</h4>
+        <h4 class="basketTotal">$${cartCost},00</h4>
+      </div>
+    `;
+  }
+}
+
 onLoadCardNumbers();
+displayCart();

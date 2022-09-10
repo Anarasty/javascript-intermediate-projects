@@ -90,8 +90,8 @@ li a {
     margin-bottom: 50px;
 }
 
-.image img {
-    width: 40%;
+img {
+    width: 20%;
 }
 
 .add-cart {
@@ -107,4 +107,66 @@ li a {
 }
 .cart1, .cart2, .cart3, .cart4 {
     border: 1px solid black;
+}
+
+/* CATR PAGE */
+.products-container {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-header {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 30%;
+}
+
+.price {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.quantity {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+}
+
+.total {
+    width: 10%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+} 
+
+.products {
+    display: flex;
+    flex-direction: column;
 }
